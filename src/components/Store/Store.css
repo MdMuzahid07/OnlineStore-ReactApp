@@ -43,3 +43,36 @@
 .all-btn .btn:hover {
     background-color: rgb(235, 39, 4);
 }
+
+@media  screen and (max-width: 1100px) {
+    .product-container {
+        display: grid;
+        grid-template-columns:repeat(2, 1fr);
+        gap: 1rem;
+        padding: 0rem 3rem;
+    }
+}
+
+@media  screen and (max-width: 600px) {
+    .product-container {
+        display: grid;
+        grid-template-columns:repeat(1, 1fr);
+        gap: 1rem;
+        padding: 0rem 1rem;
+    }
+    .store-container {
+        display: initial;
+        grid-template-columns: initial;
+    }
+
+    .all-btn {
+        background-color: white;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        position: initial;
+    }
+
+    .cart-container {
+        margin: 3rem 0rem;
+    }
+}
