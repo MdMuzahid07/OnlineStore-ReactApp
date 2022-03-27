@@ -46,6 +46,11 @@ const Store = () => {
     };
 
 
+
+
+
+    // get random product from cart
+
     const getOne = () => {
         const random = parseInt(Math.random() * 4);
         const productCart = cart[random].name;
@@ -57,12 +62,7 @@ const Store = () => {
 
     const resetCart = () => {
         setCart([]);
-    }
-
-
-
-    
-  
+    };
 
 
 
