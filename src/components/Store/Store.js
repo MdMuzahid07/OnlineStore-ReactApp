@@ -10,6 +10,7 @@ const Store = () => {
     const [products, setProduct] = useState([]);
     const [cart, setCart] = useState([]);
 
+
     console.log(cart)
 
     useEffect( () => {
@@ -42,9 +43,27 @@ const Store = () => {
             alert("You Can Add Only 4 Products On Cart");
         }
 
-
-
     };
+
+
+    const getOne = () => {
+        const random = parseInt(Math.random() * 4);
+        const productCart = cart[random].name;
+        alert(productCart);
+    };
+
+
+    // reset cart products
+
+    const resetCart = () => {
+        setCart([]);
+    }
+
+
+
+    
+  
+
 
 
 
@@ -62,8 +81,8 @@ const Store = () => {
                 }
 
                 <div className="all-btn">
-                    <button onClick={} className='btn'>Choose One</button>
-                    <button onClick={} className='btn'>Reset</button>
+                    <button onClick={getOne} className='btn'>Choose One</button>
+                    <button onClick={resetCart} className='btn'>Reset</button>
                 </div>
             </div>
         </div>
