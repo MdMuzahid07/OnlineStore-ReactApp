@@ -23,3 +23,8 @@
     border-radius: 0.1rem;
     color: white;
 }
+
+.btn:hover {
+    background-color: white;
+    color: black;
+}
