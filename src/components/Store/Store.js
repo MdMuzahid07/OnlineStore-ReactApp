@@ -22,13 +22,29 @@ const Store = () => {
     // add to cart handler
 
     const addToCartHandler = (cartProduct) => {
-        const newCart = [...cart, cartProduct ];
 
-        setCart(newCart);
+        let newCart = [ ];
+
+        if(cart.length <= 3) {
+
+            const isExists = cart.find((product) => product.id === cartProduct.id);
+
+            if(!isExists) {
+                newCart = [...cart, cartProduct ];
+                setCart(newCart);
+            }
+            else {
+                alert("Already Added This Product")
+            }
+           
+        } 
+        else {
+            alert("You Can Add Only 4 Products On Cart");
+        }
 
 
 
-    }
+    };
 
 
 
@@ -46,8 +62,8 @@ const Store = () => {
                 }
 
                 <div className="all-btn">
-                    <button className='btn'>Choose One</button>
-                    <button className='btn'>Reset</button>
+                    <button onClick={} className='btn'>Choose One</button>
+                    <button onClick={} className='btn'>Reset</button>
                 </div>
             </div>
         </div>
